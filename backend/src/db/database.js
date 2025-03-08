@@ -56,10 +56,8 @@ export const setupDatabase = async () => {
     await sequelize.sync({ alter: isDevelopment });
     console.log('Database synchronized successfully.');
     
-    // Seed initial data if in development and no data exists
-    if (isDevelopment) {
-      await seedInitialData();
-    }
+    // Seed initial data if no data exists (both in development and production)
+    await seedInitialData();
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
