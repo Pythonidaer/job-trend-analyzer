@@ -12,7 +12,13 @@ function JobTrends() {
         setLoading(true)
         // Use environment variable for API URL if available, otherwise use relative path
         const baseUrl = import.meta.env.VITE_API_URL || '';
-        const response = await axios.get(`${baseUrl}/api/job-trends`)
+        // Ensure no double slashes in the URL
+        const apiUrl = baseUrl.endsWith('/') 
+          ? `${baseUrl}api/job-trends` 
+          : `${baseUrl}/api/job-trends`;
+          
+        console.log('Fetching from URL:', apiUrl);
+        const response = await axios.get(apiUrl)
         setTrends(response.data)
         setLoading(false)
       } catch (err) {
