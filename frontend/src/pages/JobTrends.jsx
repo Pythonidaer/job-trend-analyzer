@@ -19,7 +19,9 @@ function JobTrends() {
 
   const fetchTrends = async () => {
     try {
+      if (trends.length === 0) {
       setLoading(true);
+      }
       const baseUrl = import.meta.env.VITE_API_URL || '';
       const apiUrl = baseUrl.endsWith('/')
         ? `${baseUrl}api/job-trends`
@@ -58,7 +60,7 @@ function JobTrends() {
     <div>
       <h1>Job Trends</h1>
 
-      {loading && <p>Loading...</p>}
+      {loading &&  trends.length === 0 && <p>Loading...</p>}
 
       {error && <p>{error}</p>}
 
@@ -77,6 +79,7 @@ function JobTrends() {
             </ul>
           )}
           {hasMore && <button onClick={handleLoadMore}>Load More</button>}
+          {loading && trends.length > 0 && <p>Loading More...</p>}
         </div>
       )}
     </div>
