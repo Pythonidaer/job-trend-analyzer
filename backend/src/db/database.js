@@ -71,8 +71,8 @@ const seedInitialData = async () => {
     
     // Check if data already exists
     const count = await JobTrend.count();
-    if (count > 0) {
-      console.log('Database already has data, skipping seed.');
+    if (count >= 10) {
+      console.log('Database already has 10 records, skipping seed.');
       return;
     }
     
@@ -101,12 +101,72 @@ const seedInitialData = async () => {
         growth: 22,
         category: 'Data',
         source: 'Industry Analysis'
+      },
+      {
+        title: 'Cloud Computing',
+        description: 'AWS, Azure, and GCP expertise are essential in modern development.',
+        demand: 'Very High',
+        growth: 25,
+        category: 'Infrastructure',
+        source: 'Market Research'
+      },
+      {
+        title: 'DevOps',
+        description: 'Companies increasingly seek professionals who can automate and streamline deployment processes.',
+        demand: 'High',
+        growth: 18,
+        category: 'Infrastructure',
+        source: 'Industry Survey'
+      },
+      {
+        title: 'Cybersecurity',
+        description: 'Growing concerns about data breaches drive demand for security experts.',
+        demand: 'Very High',
+        growth: 20,
+        category: 'Security',
+        source: 'Security Reports'
+      },
+      {
+        title: 'Mobile Development',
+        description: 'Cross-platform frameworks like React Native and Flutter are gaining traction.',
+        demand: 'High',
+        growth: 14,
+        category: 'Mobile',
+        source: 'Developer Surveys'
+      },
+      {
+        title: 'Blockchain',
+        description: 'Enterprise blockchain solutions create demand for distributed systems expertise.',
+        demand: 'Medium',
+        growth: 10,
+        category: 'Emerging Tech',
+        source: 'Tech Trends'
+      },
+      {
+        title: 'UI/UX Design',
+        description: 'User experience becomes increasingly critical for digital products.',
+        demand: 'High',
+        growth: 16,
+        category: 'Design',
+        source: 'Design Industry'
+      },
+      {
+        title: 'AR/VR Development',
+        description: 'Metaverse initiatives drive growth in AR/VR development skills.',
+        demand: 'Medium',
+        growth: 13,
+        category: 'Emerging Tech',
+        source: 'Tech Forecast'
       }
     ];
     
-    // Insert sample data
-    await JobTrend.bulkCreate(sampleTrends);
-    console.log('Sample data has been seeded successfully.');
+    // Only insert new records if we have less than 10
+    if (count < 10) {
+      // Get the records to insert (skip existing ones)
+      const recordsToInsert = sampleTrends.slice(count);
+      await JobTrend.bulkCreate(recordsToInsert);
+      console.log(`Added ${recordsToInsert.length} new records to reach 10 total records.`);
+    }
   } catch (error) {
     console.error('Error seeding initial data:', error);
   }
