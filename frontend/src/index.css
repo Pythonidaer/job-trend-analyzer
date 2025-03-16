@@ -209,7 +209,7 @@ button {
     .landing__content {
         gap: 2rem;
         align-items: flex-start;
-    text-align: left;
+        text-align: left;
     }
     
     .landing__form {
