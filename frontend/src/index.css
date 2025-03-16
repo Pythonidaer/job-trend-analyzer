@@ -54,6 +54,8 @@ button,
 textarea,
 select {
     font: inherit;
+    -webkit-border-radius: 0;
+    border-radius: 0;
 }
 
 /* remove animations for people who've turned them off */
