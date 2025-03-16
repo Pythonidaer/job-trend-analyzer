@@ -90,6 +90,61 @@ select {
     width: 1px;
 }
 
+/* Reset button styles */
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+
+/* iOS specific button reset */
+@supports (-webkit-touch-callout: none) {
+    button {
+        color: var(--black);
+        -webkit-text-fill-color: var(--black);
+    }
+}
+
+.landing__button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--rote-yellow);
+    border: 3px solid var(--black);
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 4px 4px 0 var(--black);
+    transition: transform 0.1s;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: var(--black);
+}
+
+.landing__button-text {
+    display: inline-block;
+    color: var(--black);
+    -webkit-text-fill-color: var(--black);
+}
+
+.landing__button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--black);
+}
+
+.landing__button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--black);
+}
+
 /* Landing Page Styles */
 .landing {
     min-height: 100vh;
@@ -141,30 +196,6 @@ select {
     background: white;
     font-size: 1rem;
     box-shadow: 4px 4px 0 var(--black);
-}
-
-.landing__button {
-    width: 100%;
-    padding: 0.75rem 1.5rem;
-    background: var(--rote-yellow);
-    border: 3px solid var(--black);
-    font-size: 1rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: 4px 4px 0 var(--black);
-    transition: transform 0.1s;
-    white-space: nowrap;
-}
-
-.landing__button:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 var(--black);
-}
-
-.landing__button:active {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 var(--black);
 }
 
 /* Responsive Breakpoints */

@@ -35,7 +35,7 @@ const LandingPage = () => {
               className="landing__button"
               aria-label="Submit demo form"
             >
-              Submit
+              <span className="landing__button-text">Submit</span>
             </button>
           </form>
         </div>
