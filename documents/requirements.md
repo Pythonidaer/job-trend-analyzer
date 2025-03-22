@@ -27,15 +27,37 @@ _To be completed... (placeholder below)_
 
 ## Quality Attributes
 
-_To be completed below..._
+### Primary Priorities
 
 | Quality Attribute | Scenario                                                                                              | Priority |
 | ----------------- | ----------------------------------------------------------------------------------------------------- | -------- |
-| A                 | A2                                                                                                    | High     |
-| B                 | B2                                                                                                    | High     |
-| C                 | C2                                                                                                    | Medium   |
-| D                 | D2                                                                                                    | Low      |
-| E                 | It appears that text that is roughly this long will result in the desired size of the markdown table. | Low      |
+| Usability                  | A user of the dashboard web app can understand the visuals presented in 5 seconds or less.	                                                                                                    | High     |
+| Accuracy                  | The web app should perfectly and immediately match the data uploaded by the user.	                                                                                                    | High     |
+| Learnability                  | Users can quickly pickup how to use the application's features and configurations.                                                                                                    | Medium   |
+| Testability                  | Developer workflow abides by Test-Driven Development, resulting in each code being unit tested, as well as linted and tested for complexity.                                                                                                 | Medium      |
+| Responsiveness                  | The app should be responsive and fully functional on mobile devices. | Low      |
+
+### Secondary Priorities
+
+| Quality Attribute | Scenario                                                                                              | Priority |
+| ----------------- | ----------------------------------------------------------------------------------------------------- | -------- |
+| Maintainability   | The developer can easily return to the codebase after a break and make updates without significant ramp-up. | High     |
+| Extensibility     | New dashboard views, tagging methods, or user features (e.g., Build Your Own Curriculum) can be added without rewriting core logic. | High     |
+| Configurability   | Users can adjust dashboard filters, views, or groupings (e.g., filter by job title or skill-tag type) to personalize their insights. | Low   |
+| Performance       | Charts and UI interactions load smoothly, even with a large number of uploaded job postings.           | Medium      |
+| Debuggability     | Developers can easily identify and fix issues through clear error messages, logs, and visual dev tools. | Low      |
+
+
+### Tertiary Priorities
+
+| Quality Attribute | Scenario                                                                                              | Priority |
+| ----------------- | ----------------------------------------------------------------------------------------------------- | -------- |
+| Accessibility     | Users who rely on keyboard navigation or screen readers can still use the application effectively.    | High     |
+| Customizability   | Users can tweak layout preferences or color themes to suit their visual preferences (e.g., high contrast mode). | Medium     |
+| Interoperability  | The app can integrate with 3rd party APIs later (e.g., LinkedIn, external learning platforms) without rearchitecting. | Medium   |
+| Observability     | The system logs client-side errors or behaviors (e.g., Sentry or logging to console) to help diagnose production bugs. | Low      |
+| Reusability       | Frontend components (charts, tagging UI, filters) can be reused across pages or exported to other projects. | Low      |
+
 
 ## Influential Functional Requirements
 
