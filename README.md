@@ -1,22 +1,64 @@
 # Job Trend Analyzer
 
-A web application for analyzing job market trends, built with React (Vite) frontend and Node.js/Express backend.
+A web application for analyzing job posting trends and skill requirements.
 
 ## Project Structure
 
-This project is organized as a monorepo with separate directories for frontend and backend:
-
 ```
 job-trend-analyzer/
-├── frontend/           # React (Vite) frontend
-│   ├── src/            # Frontend source code
-│   ├── public/         # Static assets
-│   └── package.json    # Frontend dependencies
-├── backend/            # Node.js/Express backend
-│   ├── src/            # Backend source code
-│   └── package.json    # Backend dependencies
-└── package.json        # Root package.json for workspaces
+├── assets/               # Generated diagram images and other static assets
+├── documents/           # Project documentation and architecture diagrams
+│   ├── *.md            # Markdown documentation files
+│   └── *.mmd           # Mermaid diagram source files
+├── frontend/           # React frontend application
+│   ├── public/         # Static public assets
+│   └── src/
+│       ├── assets/     # Frontend static assets
+│       ├── components/ # React components
+│       └── pages/      # Page components
+└── backend/           # Node.js + Express backend
+    └── src/
+        ├── controllers/ # Route controllers
+        ├── db/         # Database configuration
+        ├── models/     # Data models
+        └── routes/     # API routes
+
 ```
+
+## Architecture Documentation
+
+The project's architecture is documented using the C4 model approach, with diagrams created using Mermaid.js. The diagrams are stored in two formats:
+- Source files (`.mmd`) in the `documents/` directory
+- Generated PNG files in the `assets/` directory
+
+### Diagram Generation
+
+We use `@mermaid-js/mermaid-cli` to generate static PNG files from our Mermaid diagram sources.
+
+1. Install Mermaid CLI globally:
+```bash
+npm install -g @mermaid-js/mermaid-cli
+```
+
+2. Generate PNG from Mermaid source:
+```bash
+# Basic usage
+mmdc -i input.mmd -o output.png
+
+# Example for our diagrams
+mmdc -i documents/system-context.mmd -o assets/system-context.png
+mmdc -i documents/container.mmd -o assets/container.png
+```
+
+### Available Diagrams
+
+- System Context Diagram (`documents/system-context.mmd`)
+  - High-level view of the system and its interactions
+  - Generated: `assets/system-context.png`
+
+- Container Diagram (`documents/container.mmd`)
+  - Detailed view of the system's containers and their relationships
+  - Generated: `assets/container.png`
 
 ## Local Development Setup
 
