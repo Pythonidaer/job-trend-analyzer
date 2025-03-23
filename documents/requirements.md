@@ -6,24 +6,20 @@ For more information, check out the [Project Spec](./project-spec.md).
 
 ## Business Goals
 
-_To be completed..._
-
 | Stakeholder                 | Goal                                                                                         | Context                                                                                                       |
 | --------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Jonathan Hammond (CEO)      | Increase number of customer orders by 100% in one year                                       | As a new player in the market, Job Trend Analyzer needs to attract new customers with their exciting new app. |
-| Megan (VP of Engineering)   | Improve team velocity and cycle time by 25%                                                  | The new architecture should allow developers to ship features faster without compromising quality.            |
-| Lauren (Frontend Developer) | Ship code to production confidently, without fear of breaking her teammate's features        | The current big ball of mud architecture makes it hard to visualize the impact of a code change.              |
-| Maxi (Customer Persona)     | Order delicious food from his phone or computer and have it delivered as quickly as possible | Maxi is hungry and wants to eat a taco plate right now.                                                       |
+| Jonathan Hammond (CEO)      | Increase number of job postings per user to 100 and gain 10 users in one month.                                      | As a new player in the market, Job Trend Analyzer needs to attract new customers with their exciting new app. |
+| Jonathan (VP of Engineering)   | Improve code quality output by 500%                                                  | The new architecture should allow developers to ship features faster without compromising quality.            |
+| Jonathan (Frontend Developer) | Ship code to production confidently, without fear of breaking features        | I want to implement TDD but haven't learned unit testing yet (TO-DO).              |
+| Jonathan (Customer Persona)     | Upload job posts easily and immediately crack into the dashboard | Jonathan is out of work and wants to figure out which skills he needs now.                                                       |
 
 ## Contraints
 
-_To be completed... (placeholder below)_
-
 | Constraint                                                              | Context                                                                                                                              |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [Technical] Must be deployed on AWS infrastructure                      | Our DevOps team only provides support and monitoring for AWS services.                                                               |
-| [Technical] Must be responsive and fully functional on mobile devices   | Over half of our traffic comes from mobile devices and our native mobile application won't be ready to launch for at least 6 months. |
-| [Business] Must ship to production by November 2024 (4 months from now) | Job Trend Analyzer is planning a massive marketing launch in November and this product is a key component of the marketing strategy. |
+| [Technical] Must first be deployed on Railway infrastructure                      | This is a service that provides a free tier for deploying web applications. It might need to change once I get users though!                                                               |
+| [Technical] Must be responsive and fully functional on mobile devices   | Nowadays if a developer's website isn't responsive it makes it look like they don't know what they're doing. |
+| [Business] Must ship to production by April 2025 (1 month from now) | Job Trend Analyzer needs to work for me soon so that I can get a job. |
 
 ## Quality Attributes
 

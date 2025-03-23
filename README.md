@@ -27,38 +27,11 @@ job-trend-analyzer/
 
 ## Architecture Documentation
 
-The project's architecture is documented using the C4 model approach, with diagrams created using Mermaid.js. The diagrams are stored in two formats:
-- Source files (`.mmd`) in the `documents/` directory
-- Generated PNG files in the `assets/` directory
+The project's architecture is documented using the C4 model approach, with diagrams created using [Structurizer](https://structurizr.com/dsl). The diagrams are stored in two formats:
+- Backup code files (`.dsl`) in the `documents/` directory
+- Saved PNG files in the `assets/` directory
 
-### Diagram Generation
-
-We use `@mermaid-js/mermaid-cli` to generate static PNG files from our Mermaid diagram sources.
-
-1. Install Mermaid CLI globally:
-```bash
-npm install -g @mermaid-js/mermaid-cli
-```
-
-2. Generate PNG from Mermaid source:
-```bash
-# Basic usage
-mmdc -i input.mmd -o output.png
-
-# Example for our diagrams
-mmdc -i documents/system-context.mmd -o assets/system-context.png
-mmdc -i documents/container.mmd -o assets/container.png
-```
-
-### Available Diagrams
-
-- System Context Diagram (`documents/system-context.mmd`)
-  - High-level view of the system and its interactions
-  - Generated: `assets/system-context.png`
-
-- Container Diagram (`documents/container.mmd`)
-  - Detailed view of the system's containers and their relationships
-  - Generated: `assets/container.png`
+Future architecture diagram checklist review is available [here](https://c4model.com/diagrams/checklist).
 
 ## Local Development Setup
 
