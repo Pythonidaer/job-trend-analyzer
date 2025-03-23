@@ -4,13 +4,11 @@
 
 ## 0. Project Overview
 
-_To be completed..._
+**Job Trend Analyzer** is a productivity tool meant for **identifying skills patterns across a variety of job postings and titles**, starting with the pursuit of a successful MVP.
 
-**Job Trend Analyzer** (JTA) is a productivity tool that is looking to **identify skills patterns across a variety of job postings and titles**, starting with the pursuit of a successful MVP. (needs work)
+The project currently has a team of one software engineer ([Jonathan Hammond](https://www.linkedin.com/in/jonamichahammo)). Designed with the intention of gaining re-employment, while also building a tool that helps users find work in the meantime. The build-time deadline for this project is June 1st, 2025.
 
-JTA currently has a team of one software engineer [Jonathan Hammond](https://www.linkedin.com/in/jonamichahammo). This project is designed with the intention of gaining re-employment, while also building a tool that helps users find work in the meantime. The build-time deadline for this project is June 1st, 2025.
-
-My goal as the frontend architect of this project is to **design the architecture of JTA's user-facing web application**. This includes gathering requirements, designing an architecture that meets those requirements, and releasing project updates on LinkedIn during implementation.
+My goal as the frontend architect of this project is to **design the architecture of Job Trend Analyzer's user-facing web application**. This includes gathering requirements, designing an architecture that meets those requirements, and releasing project updates on LinkedIn during implementation. All which will culminate in the product being available for users.
 
 ## 1. Job Trend Analyzer Software System
 
@@ -22,17 +20,21 @@ _This is a zoomed out view of the Job Trend Analyzer system and the context arou
 
 #### System Users
 
-- **👩🏻 User** — Job Seekers tracking the skills and phrases they see on job postings. They use the User Web App client to upload job role descriptions and highlight skills (hard and soft), as well as job role phrases, to identify patterns for items commonly in demand, and use this to focus on what to either add on their resume or upskill on.
+- **👩🏻 Authenticated User** — Job Seekers tracking the skills and phrases they see on job postings. They use the User Web App client to upload job role descriptions and highlight skills (hard and soft), as well as job role phrases, to identify patterns for items commonly in demand, and use this to focus on what to either add on their resume or upskill on.
+
+- **👩🏻 Admin User** — Members of JTA's employees (me) who manage and moderate the JTA system. Useful for when features haven't been implemented yet, or if anything buggy occurs. Eventually will have their own dashboard.
+
+- **🤖 Unauthenticated User** — Unauthenticated users have access to the demo of the User Web App, which allows them to explore the features of the application and understand how it works.
 
 #### External Systems
 
-- **Emailing System** — Emailing system used by JTA's applications to notify users on updates, such as when the product will be available for usage.
+- **Third-Party Emailing System** — Emailing system used by Job Trend Analyzer's applications to notify users on updates, such as when the product features will be available for usage.
 
-- **Job Trend Analyzer Admin System** — Software system used by JTA's employees (me) manage and moderate the JTA system.
+- **Job Trend Analyzer Admin System** — Software system used by JTA's employees (me) manage and moderate the JTA system. Probably will consist of full access to user accounts for replication purposes, with expanded editing features.
 
 #### System Context Diagram
 
-![System Context Diagram](../assets/system-context-diagram.png)
+![System Context Diagram](../assets/structurizr-system_context.png)
 
 ### System Containers
 
@@ -44,13 +46,13 @@ _These are the building blocks of the system. Use this list as well as the syste
 
 #### Container Diagram
 
-![Container Diagram](../assets/container-diagram.png)
+![Container Diagram](../assets/structurizr-container_diagram.png)
 
 ---
 
 ## 2. Job Trend Analyzer User Web Application
 
-_To be completed..._
+_Still needs Figma..._
 
 _This section describes the user-facing application in more detail. It's meant to give you a high-level understanding of the app we're designing the architecture for, and it should have enough information to complete the exercises in the workshop._
 
@@ -66,7 +68,7 @@ _Note: This is not an **actual** UI spec—it's just screenshots from Uber Eats 
 
 ### Functional Requirements
 
-_This section lists some of the main functional requirements of Job Trend Analyzer's web app. This is more of a functionality overview to help guide some of your architectural decisions._
+_This section lists some of the main functional requirements of Job Trend Analyzer's web app. This is more of a functionality overview to help guide some of your architectural decisions - Needs a Run through later on._
 
 #### Authentication
 
