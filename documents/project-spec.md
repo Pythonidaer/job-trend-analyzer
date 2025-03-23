@@ -41,7 +41,7 @@ _This is a zoomed out view of the Job Trend Analyzer system and the context arou
 _These are the building blocks of the system. Use this list as well as the system context diagram above to build the container diagram for the Job Trend Analyzer software system._
 
 - **User Web App** [React] — This is the app that we're designing the architecture for. It's a web application used by customers to search for restaurants and make food delivery orders.
-- **Core API** [Node.js/Express] — REST API used by the User Web App and Job Trend Analyzer Admin System  to manage user information, job postings, and [needs more description on what the API does]. The Core API also acts as a gateway to external systems (i.e. emailing and admin systems.)
+- **Core API** [Node.js/Express] — REST API used by the User Web App and Job Trend Analyzer Admin System to manage user information, job postings, and [needs more description on what the API does]. The Core API also acts as a gateway to external systems (i.e. emailing and admin systems.)
 - **Core Database** [PostgreSQL] — Main data store for the application. The Core API reads from and writes to this database.
 
 #### Container Diagram
@@ -75,8 +75,8 @@ _This section lists some of the main functional requirements of Job Trend Analyz
 - Users can browse the app without being authenticated.
 - Users can create an account using email or social media accounts (e.g., Google).
 - Users can authenticate using their created account credentials.
-- Authenticated users can update their profile information.
 - Authenticated users can reset their passwords if forgotten.
+- Authenticated Users can sign up for email alerts for when new features are released (or updates in case pricing options ever surface).
 
 #### Uploading and Managing Job Postings
 
@@ -96,6 +96,19 @@ _This section lists some of the main functional requirements of Job Trend Analyz
 - Users can update or remove tags at any time.
 - The system maintains a structured database of tagged phrases for aggregation.
 
+#### Confidence Tracker
+
+- Authenticated Users can utilize a star-review system to rank their confidence they have in each skill or phrase
+- Authenticated Users can create multiple Trackers (in case they have roles for 'Nurse', 'Developer' 'Analyst', etc.)
+
+#### Data Export (Optional)
+
+- Authenticated Users can create global ideal candidate resumes, in attempts to base the "perfect candidate" containing lists of all skills and phrases for roles with this specific title
+- Authenticated Users can create global skillbase resumes, in attempts to document all the skills they currently have in relation to the requirements and "nice to haves" sections of resumes they see for related roles
+- Users can CRUD these
+- Users can create multiples of either, since their skillset (ideal or personal) may span multiple job titles
+- Authenticated users can export their resumes in [TBD] format
+
 #### B. Y. O. C.
 
 - Authenticated users who upload job postings can create card grids with links and text, allowing them to create a To-Do list-type interface through building their own curriculum.
@@ -104,32 +117,27 @@ _This section lists some of the main functional requirements of Job Trend Analyz
 
 #### Dashboard and Data Visualization
 
-- Users can access an interactive dashboard summarizing the most common hard skills, soft skills, and custom phrases.
+- Authenticated Users can access an interactive dashboard summarizing the most prevant hard skills, soft skills, and custom phrases.
 - Dashboards are filterable by job title, phrase type, and skill keyword.
-- Users can configure which dashboard tab they want to view.
+- Authenticated Users can configure which dashboard tab they want to view.
 - The dashboard may include the following visualizations:
   - Bar charts showing top skills and phrases
   - Word clouds showing frequency-weighted terms
   - Back-to-back bar charts comparing job roles
-  - Co-occurrence matrices for common skill pairings
+  - Heat charts
   - Pie charts showing the distribution of skill types
+- Authenticated Users can save notes to the bottom of their dashboard (Notes)
 
 #### Public vs. Private Data Access
 
 - An authenticated user's dashboard shows aggregated, filterable data from their own job postings.
-- Authenticated users have access to edit and manage their own data, while public users have local and read-only access to the demo.
-
-#### Data Export (Optional)
-
-- Authenticated users can export their resumes in [TBD] format.
-- Exported data may include their global resume and the global "ideal candidate" resume.
+- Authenticated users have access to edit and manage their own data, while public users have local and read-only access to the demo only.
 
 #### Notifications, Automation, and Future Features (Optional/Future)
 
 - Authenticated users who sign up for emails may receive notifications for new features.
 - The system may automate the process of uploading job postings in the future, once the API is integrated with AI features.
 - Authenticated Users can create views for specific queries.
-
 
 ### Architectural Requirements
 
