@@ -2,6 +2,9 @@
 
 A web application for analyzing job posting trends and skill requirements.
 
+Note: This README is a work in progress and will be updated as the project progresses.
+3/25/25: see also: https://draftjs.org/docs/api-reference-content-state
+
 ## Project Structure
 
 ```
