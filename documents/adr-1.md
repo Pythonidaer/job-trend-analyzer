@@ -1,4 +1,4 @@
-# ADR 1: Using React.js for Job Trend Analyzer's Dashboard Web Application
+# ADR 1: Using React.js for the Dashboard Web App
 
 ## Status
 
@@ -6,7 +6,7 @@ Accepted
 
 ## Context
 
-As I prepare to begin development of Job Trend Analyzer's new dashboard web application, one ke decision that was made is which UI framework we're going to use and what infrastructure we need to deploy it.
+As I prepare to begin development of Job Trend Analyzer's new dashboard web application, one key decision that was made is which UI framework we're going to use and what infrastructure we need to deploy it.
 
 The objective is to create a sleek, easy to use, and accurate web application that can meet our users' needs efficiently, and given my unemployment timeline of 2 months, I need ot be strategic about tech stack decisions to ensure low-to-no cost, rapid development, and high-quality output.
 
